@@ -10,7 +10,8 @@ app.get('/', function(request, response) {
     //response.send('Hello World 2!');
     buffer = fs.readFileSync("index.html").toString("utf8");
     response.send(buffer);
-    //console.log(fs.readFileSync('index.html', 'utf8});
+    //console.log(fs.readFileSync('index.html', 'utf8'});
+});
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
