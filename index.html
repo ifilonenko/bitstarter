@@ -13,6 +13,57 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
     <style type="text/css">
+          /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 3px 3px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
 
       /* Large desktop */
       @media (min-width: 980px) { 
@@ -128,19 +179,18 @@
   margin: 0 auto;
  }
   </style>
+ <script type="text/javascript">
 
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43014354-1']);
+  _gaq.push(['_trackPageview']);
 
-ga('create', 'UA-38690626-2','bibhrajit-bitstarter-mooc.herokuapp.com');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+   </script> 
   </head>
   <body>
 
@@ -220,54 +270,72 @@ ga('send', 'pageview');
     <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
     <!-- Carousel items -->
-    <div class="carousel-inner">
-    <div class="active item">
-      <img src="https://dl.dropbox.com/s/db5lxv4nwluw755/HomepageSlide1.png">
-      <div class="carousel-caption">
+ <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="http://i.imgur.com/fcKo3vW.jpg?1" title="Hosted by imgur.com" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Invest in the future of BioMedical Engineering!</h1>
+              <p class="lead">Imagine a future of biotech saving and helping lives, with thanks to you!
+		                      Join our growing community and invest in this monumental form of research! </p>
+              <a class="btn btn-large btn-primary" href="#">Join Community</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://i.imgur.com/W2jkQMA.jpg?1" title="Hosted by imgur.com" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>The future of Robotic Ears</h1>
+              <p class="lead">Intellegence in ears!</p>
+              <a class="btn btn-large btn-primary" href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://i.imgur.com/0Gt43qi.jpg" title="Hosted by imgur.com" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>The future of Robotic Arms</h1>
+              <p class="lead">Intellegence in arms!</p>
+              <a class="btn btn-large btn-primary" href="#">Read More</a>
+            </div>
+          </div>
+        </div>
       </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+    
+    <!-- new product lines -->
+    <!-- END new product lines -->
+    
+    <!-- resisable layout -->
+<!-- We use row-fluid inside containers to achieve a resizable layout. -->
+<!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+<!-- http://stackoverflow.com/a/12270322 -->
+<div class="container">
+  <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+  <!-- www.google.com/fonts/specimen/Ubuntu -->
+  <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+  <div class="row-fluid heading">
+    <div class="span12">
+      <h1>BioTech</h1>
+      </div>
+    </div> 
+  <div class="row-fluid subheading">
+    <div class="span12">
+      <!-- Special typography from Bootstrap for first paragraph. -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+      <p class="lead">The future of advanced Biomedical Engineering,p>
+	</div>
     </div>
-    <div class="item">
-      <img src="https://dl.dropbox.com/s/6n36lafc026me3w/HomepageSlide2.png">
-      <div class="carousel-caption">      
-      </div>        
-    </div>
-    <div class="item">
-      <img src="https://dl.dropbox.com/s/apa8vq7riht7gqi/HomepageSlide3.png">
-      <div class="carousel-caption">      
-      </div>        
-    </div>
-    <div class="item">
-      <img src="https://dl.dropbox.com/s/auj8yjg0rggpw5u/MathCoreFeaturesSlide4.png">
-      <div class="carousel-caption">      
-      </div>        
-    </div>
-    <div class="item">
-      <img src="https://dl.dropbox.com/s/mkphpzl1qjssd7t/MathCoreFeaturesSlide1.png">
-      <div class="carousel-caption">      
-      </div>        
-    </div>    
-    <div class="item">
-      <img src="https://dl.dropbox.com/s/q5xgo3r6ac7uisb/MathCoreFeaturesSlide2.png">
-      <div class="carousel-caption">      
-      </div>        
-    </div>
-    <div class="item">
-      <img src="https://dl.dropbox.com/s/g1b6ox72j7klwcb/MathCoreFeaturesSlide3.png">
-      <div class="carousel-caption">      
-      </div>        
-    </div>    
-  </div>
-    <!-- Carousel nav -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
- </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-     <!--  <img class="img-polaroid" src="http://www.youtube.com/emddeb/uJ7QRkWI4xI"> -->
-        <iframe width="480" height="300" src="//www.youtube.com/embed/uJ7QRkWI4xI" frameborder="0" allowfullscreen></iframe>
-           </div>
-
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+  <div class="row-fluid pitch">
+    <div class="span5 offset1 video">
+      <img class="img-polaroid" src="http://i.imgur.com/eZkSTkL.jpg?1" title="Hosted by imgur.com">
+    </div> 
+   <!--Define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
           <div class="span8 offset2">
             <div class="statistics">
@@ -419,14 +487,13 @@ Math Core is built to the exact specifications of Common Core Math standards and
       </div>
     </div>
    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-38690626-2', 'bibhrajit-bitstarter-mooc.herokuapp.com');
+  ga('create', 'UA-43014354-1', 'herokuapp.com');
   ga('send', 'pageview');
-
 </script> 
 
   </body>
